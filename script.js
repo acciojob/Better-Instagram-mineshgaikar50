@@ -1,24 +1,59 @@
+// Select all draggable elements and the parent container
+const images = document.querySelectorAll(".image");
+const parent = document.getElementById("parent");
 
-const boxes = document.querySelectorAll(".image");
+let draggedItem = null;
 
-let draggerItem = null;
-console.log("boxes", boxes);
-boxes.forEach((item) => {
-  let img = item.querySelector("img");
-  img.addEventListener("dragstart", (e) => {
-    draggerItem = e.target;
+// Add event listeners for drag and drop functionality
+images.forEach((image) => {
+  // When dragging starts
+  image.addEventListener("dragstart", (e) => {
+    draggedItem = image;
+    setTimeout(() => {
+      image.style.display = "none"; // Hide the dragged element temporarily
+    }, 0);
   });
-  img.addEventListener("dragover", (e) => {
-    e.preventDefault();
+
+  // When dragging ends
+  image.addEventListener("dragend", () => {
+    setTimeout(() => {
+      draggedItem.style.display = "block"; // Show the dragged element again
+      draggedItem = null;
+    }, 0);
   });
-  img.addEventListener("drop", (e) => {
-    e.preventDefault();
-    if (draggerItem && draggerItem !== e.target) {
-      console.log("Inside drop");
-       let draggedSrc = draggerItem.src;
-      draggerItem.src = e.target.src;
-      e.target.src = draggedSrc;
+});
+
+// Add event listeners for the parent container
+parent.addEventListener("dragover", (e) => {
+  e.preventDefault(); // Allow dropping
+});
+
+parent.addEventListener("dragenter", (e) => {
+  e.preventDefault(); // Highlight the drop zone
+  if (e.target.classList.contains("image")) {
+    e.target.classList.add("selected");
+  }
+});
+
+parent.addEventListener("dragleave", (e) => {
+  if (e.target.classList.contains("image")) {
+    e.target.classList.remove("selected"); // Remove the highlight
+  }
+});
+
+parent.addEventListener("drop", (e) => {
+  e.preventDefault();
+  if (e.target.classList.contains("image") && draggedItem !== e.target) {
+    e.target.classList.remove("selected");
+    // Rearrange elements by swapping their positions
+    const allItems = Array.from(parent.children);
+    const droppedIndex = allItems.indexOf(e.target);
+    const draggedIndex = allItems.indexOf(draggedItem);
+
+    if (droppedIndex > draggedIndex) {
+      parent.insertBefore(draggedItem, e.target.nextSibling);
+    } else {
+      parent.insertBefore(draggedItem, e.target);
     }
-    draggerItem = null;
-  });
+  }
 });

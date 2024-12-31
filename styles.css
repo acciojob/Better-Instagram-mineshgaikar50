@@ -1,69 +1,63 @@
 #image1 {
-    /*background-image: url("https://picsum.photos/id/237/200/300");*/
+    background-image: url("https://picsum.photos/id/237/200/300");
     height: 300px;
     width: 200px;
     margin: 20px;
-}
-
-#image2 {
-    /*background-image: url("https://picsum.photos/seed/picsum/200/300");*/
+  }
+  
+  #image2 {
+    background-image: url("https://picsum.photos/seed/picsum/200/300");
     height: 300px;
     width: 200px;
     margin: 20px;
-}
-
-#image3 {
-    /*background-image: url("https://picsum.photos/200/300?grayscale");*/
+  }
+  
+  #image3 {
+    background-image: url("https://picsum.photos/200/300?grayscale");
     height: 300px;
     width: 200px;
     margin: 20px;
-}
-
-#image4 {
-    /*background-image: url("https://picsum.photos/200/300/");*/
+  }
+  
+  #image4 {
+    background-image: url("https://picsum.photos/200/300/");
     height: 300px;
     width: 200px;
     margin: 20px;
-}
-
-#image5 {
-    /*background-image: url("https://picsum.photos/200/300.jpg");*/
+  }
+  
+  #image5 {
+    background-image: url("https://picsum.photos/200/300.jpg");
     height: 300px;
     width: 200px;
     margin: 20px;
-}
-
-#image6 {
-    /*background-image: url("https://picsum.photos/id/102/200/300");*/
+  }
+  
+  #image6 {
+    background-image: url("https://picsum.photos/id/102/200/300");
     height: 300px;
     width: 200px;
     margin: 20px;
-}
-.grid-item {
-    background-size: cover;
-    background-position: center;
-    height: 200px;
-}
-
-
-div.container {
+  }
+  
+  div.container {
     border: 5px solid #555;
-}
-
-.flex {
+  }
+  
+  .flex {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.selected {
+  }
+  
+  .selected {
     border: 5px solid rgb(0, 195, 255);
-}
-
-p {
+  }
+  
+  p {
     text-align: center;
-}
-
-button {
+  }
+  
+  button {
     margin: 20px;
-}
+  }
