@@ -1,40 +1,40 @@
 #image1 {
-    background-image: url("https://picsum.photos/id/237/200/300");
+    /*background-image: url("https://picsum.photos/id/237/200/300");*/
     height: 300px;
     width: 200px;
     margin: 20px;
 }
 
 #image2 {
-    background-image: url("https://picsum.photos/seed/picsum/200/300");
+    /*background-image: url("https://picsum.photos/seed/picsum/200/300");*/
     height: 300px;
     width: 200px;
     margin: 20px;
 }
 
 #image3 {
-    background-image: url("https://picsum.photos/200/300?grayscale");
+    /*background-image: url("https://picsum.photos/200/300?grayscale");*/
     height: 300px;
     width: 200px;
     margin: 20px;
 }
 
 #image4 {
-    background-image: url("https://picsum.photos/200/300/");
+    /*background-image: url("https://picsum.photos/200/300/");*/
     height: 300px;
     width: 200px;
     margin: 20px;
 }
 
 #image5 {
-    background-image: url("https://picsum.photos/200/300.jpg");
+    /*background-image: url("https://picsum.photos/200/300.jpg");*/
     height: 300px;
     width: 200px;
     margin: 20px;
 }
 
 #image6 {
-    background-image: url("https://picsum.photos/id/102/200/300");
+    /*background-image: url("https://picsum.photos/id/102/200/300");*/
     height: 300px;
     width: 200px;
     margin: 20px;
